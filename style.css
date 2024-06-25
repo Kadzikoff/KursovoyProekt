@@ -1,0 +1,614 @@
+/* Работает в Firefox */
+/* Стили для пользовательской полосы прокрутки в Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #7B6358 #EAECEC;
+}
+
+/* Работает в Chrome, Edge и Safari */
+/* Стили для пользовательской полосы прокрутки в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #EAECEC;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7B6358;
+    border-radius: 20px;
+    border: 3px solid #EAECEC;
+}
+
+/* Общие стили для элементов */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Стили для кнопок */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Стили для текста */
+a, span, p {
+    font-family: "Inter", sans-serif;
+    color: #EAECEC;
+    z-index: 3;
+}
+
+a:hover {
+    color: #7B6358;
+}
+
+/* Общие стили для body */
+body {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: #1B1C1D;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+
+/* Стили для блока "Landing" */
+.Landing {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для главного навигационного блока */
+.MainNavBar {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1B1C1D;
+    z-index: 3;
+}
+
+/* Стили для обертки навигационного блока */
+.NavBarWrapper {
+    width: 100%;
+}
+
+/* Стили для навигационного блока */
+.NavBar {
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+    align-content: center;
+    align-items: center;
+}
+
+/* Стили для логотипа */
+.Logo {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Стили для элемента "City" */
+.City {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Стили для блока "SportGuide" */
+.SportGuide {
+    display: flex;
+    text-decoration: none;
+}
+
+/* Стили для заголовка "SportTitle" */
+.SportTitle {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Стили для заголовка "GuideTitle" */
+.GuideTitle {
+    font-size: 25px;
+    font-weight: 700;
+    color: #7B6358;
+}
+
+/* Стили для блока навигационного меню */
+.NavBarBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Стили для текста в навигационном меню */
+.NavBarText {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Стили для заголовка главного контента */
+.MainContentHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Стили для заголовка главного контента */
+.MainContentTitle {
+    max-width: 1400px;
+    height: auto;
+}
+/* Стили для заголовка "SportGuideTitle" */
+.SportGuideTitle {
+    font-size: 90px;
+    font-weight: 700;
+    color: #7B6358;
+    text-align: center;
+    opacity: 0; /* Устанавливаем начальное значение прозрачности 0 */
+    animation: slideInFromTop 1.5s ease forwards; /* Добавляем анимацию fadeIn с задержкой 1.5s */
+}
+
+/* Стили для подзаголовка "SportGuideSubtitle" */
+.SportGuideSubtitle {
+    font-size: 70px;
+    font-weight: 600;
+    color: #EAECEC;
+    text-align: center;
+    opacity: 0; /* Устанавливаем начальное значение прозрачности 0 */
+    animation: slideInFromTop 2.0s ease forwards; /* Добавляем анимацию fadeIn с задержкой 2.0s */
+}
+
+@keyframes slideInFromTop {
+    /* Определяем анимацию для появления текста */
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Можно добавить небольшое смещение вверх для эффекта "всплытия" */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Стили для блока "ArrowDownBtn" при наведении */
+.ArrowDownBtn:hover {
+    filter: brightness(10);
+}
+
+/* Стили для основного контейнера */
+.MainContainer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ButtonGuest {
+    padding: 15px;
+    background-color: #7B6358;
+    color: white;
+    border-radius: 5px;
+}
+.ButtonGuest:hover {
+    background-color: transparent;
+    border: 2px solid #7B6358;
+    padding: 13px;
+    color: black;
+}
+.ButtonGuestA:hover {
+    background-color: transparent;
+    color: black;
+}
+.BodyButton {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+/* Стили для общего блока */
+.ForAllBlock {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #EAECEC;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Стили для заголовка общего блока */
+.ForAllTitle {
+    font-size: 50px;
+    font-weight: 700;
+    color: #1B1C1D;
+}
+
+/* Стили для элемента списка */
+.ListItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 0 15px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-self: stretch;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/* Стили для изображения в списке */
+.ImgList {
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
+
+/* Стили для текстового блока */
+.TextBlock {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для заголовка элемента списка */
+.ListItemTitle {
+    font-size: 25px;
+    font-weight: 500;
+    color: #1B1C1D;
+    text-align: center;
+}
+
+/* Стили для текста элемента списка */
+.ListItemText {
+    font-size: 20px;
+    font-weight: regular;
+    color: #1B1C1D;
+    text-align: center;
+}
+
+/* Стили для контейнера поиска */
+.ContainerSearch {
+    width: 100%;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #1B1C1D;
+}
+
+/* Стили для заголовка поиска */
+.SearchTitle {
+    font-size: 50px;
+    font-weight: 700;
+    color: #EAECEC;
+    text-align: center;
+}
+
+/* Стили для основного контейнера списка */
+.MainListWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: auto;
+    margin: 30px;
+    gap: 15px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Стили для списка */
+.MainList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    margin: 30px;
+    gap: 15px;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+/* Стили для боковой панели фильтров */
+.SideBarFilter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #EAECEC;
+    border-radius: 10px;
+   
+}
+
+/* Стили для блоков результатов */
+.ResultBlocks {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для блока результата */
+.ResultBlock {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    background-color: #EAECEC;
+    border-radius: 10px;
+}
+/* Стили для заголовка блока результата */
+.ResultHeadText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Стили для заголовка виджета */
+.WidgetHeader {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3px;
+    padding: 10px;
+}
+
+/* Стили для заголовка виджета */
+.WidgetHeaderTitle {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    color: #7B6358;
+}
+
+/* Стили для метаданных виджета */
+.WidgetHeaderMeta {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    color: #1B1C1D;
+}
+
+/* Стили для местоположения виджета */
+.WidgetHeaderLocation {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    color: #1B1C1D;
+}
+
+/* Стили для спецификации виджета */
+.WidgetSpec {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Стили для спецификации виджета */
+.Spec {
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Стили для индекса в спецификации виджета */
+.SpecIndex {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #1B1C1D;
+    width: auto;
+    flex: 0 0 150px;
+}
+
+
+/* Стили для значения в спецификации виджета */
+.SpecValue {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #1B1C1D;
+    width: auto;
+}
+
+
+/* Модальное окно */
+@import "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css";
+
+.InfoOrganization{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.InfoSport{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Блок фильтров */
+.Filter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.FilterBlock {
+    width: auto;
+    height: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #7B6358;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+.ButtonConfirm {
+    width: 100px;
+    height: 40px;
+    padding: 20px;
+    background-color: #7B6358;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.ButtonConfirm:hover {
+    background-color: white;
+    color: black;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: 1px solid black;
+    padding: 19px;
+}
+.FilterBlock::placeholder {
+    color: black;
+}
+.FilterBlock::input {
+    padding-left: 5px;
+}
+
+/* footer */
+.Footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+.FBlock {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.FTitle {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.Contact {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.ContanctImg {
+    width: 30px;
+    height: 30px;
+}
+.ContactText {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.SearchBlock {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid #7B6358;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 5px;
+    color: white;
+}
+.SearchBlock::hint {
+    color: white;
+}
+.BlockSearch {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
